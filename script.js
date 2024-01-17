@@ -87,8 +87,8 @@ rps.forEach((e)=>{
         choosingContainer.style.display="none"
         resultContainer.style.display="block"
 
-        userChoiceImg.src=`/images/${userChoice}.png`
-        compChoiceImg.src=`/images/${compChoice}.png`
+        userChoiceImg.src=`/images/${userChoice}.webp`
+        compChoiceImg.src=`/images/${compChoice}.webp`
 
         if(userChoice===compChoice){
             drawCount++;
