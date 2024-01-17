@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #F9EFDB;
+    color: #607274;
+    font-family: 'Oswald', sans-serif;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    margin-top: 10vh;
+    letter-spacing: 2px;
+}
+
+.container{
+    width: 60vw;
+    margin-top:5vh ;
+}
+
+.choosing{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.choosing > h3{
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+.choosing-images{
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+
+}
+
+.choosing-images > div  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.choosing-images > div > h3{
+    font-size: 2rem;
+}
+.choosing .choosing-images  img{
+    width: 12vw;
+    margin-bottom: 1.5rem;
+    filter:drop-shadow(2px 2px 2px rgb(90, 86, 86));
+    transition: all ease-in 0.2s;
+}
+
+#scissor{
+    width: 9.7vw;
+}
+
+
+.choosing-images  img:hover {
+    transform: scale(1.2);
+}
+
+
+
+/*---------------------------------------------------------------*/
+
+.result{
+    width: 100%;
+    height: 100%;
+    display: none;
+    margin-top:2rem ;
+}
+
+.result > .choice-images{
+    height: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.choice-images > div{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.choice-images div h3{
+    font-size: 2rem;
+}
+.result img {
+    width: 12vw;
+    filter:drop-shadow(2px 2px 2px rgb(90, 86, 86));
+}
+
+.result-info h1 {
+    font-size: 4rem;
+    margin-top: 0;
+}
+
+.score-board p{
+     font-size: 1.7rem;
+}
+.score-board{
+    display: flex;
+    column-gap: 2rem;
+    margin-top: 5vh;
+
+}
+
+button{
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    margin-top: 2rem;
+    background-color: #638889;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    border-radius: 4px;
+}

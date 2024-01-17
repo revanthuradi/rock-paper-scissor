@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissor</title>
+
+</head>
+<body>
+    <div class="main">
+        <h1>ROCK &diams; PAPER &diams; SCISSORS</h1>
+        <div class="container">
+            <div class="choosing">
+                <h3>CHOOSE</h3>
+                <div class="choosing-images">
+                    <div>
+                        <img class="rps-images  rock" id="rock" src="images/rock.png" alt="rock" >
+                        <h3>Rock</h3>
+                    </div>
+                    <div>
+                        <img class="rps-images paper" id="paper" src="images/paper.png" alt="paper" >
+                        <h3>Paper</h3>
+                    </div>
+                    <div>
+                        <img class="rps-images scissor" id="scissor" src="images/scissor.png" alt="scissor" >
+                        <h3>Scissor</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+            <div class="result">
+                <div class="choice-images">
+                    <div>
+                        <img src="/images/paper.png" alt class="use-choice-img">
+                        <h3>YOU</h3>
+                    </div>
+                    <div>
+                        <img src="/images/scissor.png" alt="" class="comp-choice-img">
+                        <h3>COMP</h3>
+                    </div>
+                </div>
+                <div class="result-info">
+                    <h1 class="result-info-h1">You Won</h1>
+                </div>
+                
+            </div>
+        <div class="score-board">
+            <p class="won">Won :0</p>
+            <p class="draw">Draw :</p>
+            <p class="lost">Lost :</p>
+        </div>
+        <button onclick="initializeGame()">Restart <i class="ri-restart-line"></i></button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
