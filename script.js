@@ -10,9 +10,9 @@ const draw = document.querySelector(".draw")
 const wonInfo = document.querySelector(".result-info-h1")
 
 
-let winSound = new Audio("sounds/winner.m4a")
-let drawSound = new Audio("sounds/draw.m4a")
-let lostSound = new Audio("sounds/lost.m4a")
+const winSound = new Audio("sounds/winner.m4a")
+const drawSound = new Audio("sounds/draw.m4a")
+const lostSound = new Audio("sounds/lost.m4a")
 
 let wonCount = 0
 let lostCount = 0
