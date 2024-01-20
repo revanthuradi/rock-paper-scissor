@@ -10,10 +10,6 @@ const draw = document.querySelector(".draw")
 const wonInfo = document.querySelector(".result-info-h1")
 
 
-const userChoiceImg = document.querySelector(".user-choice-img")
-const compChoiceImg = document.querySelector(".comp-choice-img")
-
-
 let winSound = new Audio("sounds/winner.m4a")
 let drawSound = new Audio("sounds/draw.m4a")
 let lostSound = new Audio("sounds/lost.m4a")
@@ -51,7 +47,7 @@ resultContainer.addEventListener("click",() =>{
     choosingContainer.style.display="block"
 })
 
-const compChoiceArr = ["rock","paper","scissor"]
+
 const randomNum = () => Math.floor(Math.random()*3)
 
 
@@ -73,6 +69,11 @@ const checkForWin = (userChoice,compChoice) => {
 
 }
 
+function setImages(comp,user){
+    document.querySelector(".user-choice-img").src=`./images/${comp}.webp`
+    document.querySelector(".comp-choice-img").src=`./images/${user}.webp`
+}
+
 function playAudio(audio){
     audio.play()
 }
@@ -80,19 +81,20 @@ function playAudio(audio){
 rps.forEach((e)=>{
 
     e.addEventListener("click",()=>{
+
+        const compChoiceArr = ["rock","paper","scissor"]
+
         const userChoice = e.id
         const compChoice = compChoiceArr[randomNum()]
-        console.log(userChoice,compChoice);
+        
+        setImages(compChoice,userChoice)
 
         choosingContainer.style.display="none"
         resultContainer.style.display="block"
 
-        userChoiceImg.src=`./images/${userChoice}.webp`
-        compChoiceImg.src=`./images/${compChoice}.webp`
 
         if(userChoice===compChoice){
             drawCount++;
-            console.log("draw",drawCount);
             wonInfo.textContent="Draw"
             playAudio(drawSound)
 
@@ -100,12 +102,10 @@ rps.forEach((e)=>{
             const win = checkForWin(userChoice,compChoice)
             if(win){
                 wonCount++;
-                console.log("you won",wonCount);
                 wonInfo.textContent="You won"
                 playAudio(winSound)
             }else{
                 lostCount++;
-                console.log("you lost",lostCount);
                 wonInfo.textContent="You Lose"
                 playAudio(lostSound)
             }
