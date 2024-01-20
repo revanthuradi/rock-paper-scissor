@@ -10,7 +10,7 @@ const draw = document.querySelector(".draw")
 const wonInfo = document.querySelector(".result-info-h1")
 
 
-const userChoiceImg = document.querySelector(".use-choice-img")
+const userChoiceImg = document.querySelector(".user-choice-img")
 const compChoiceImg = document.querySelector(".comp-choice-img")
 
 
@@ -87,8 +87,8 @@ rps.forEach((e)=>{
         choosingContainer.style.display="none"
         resultContainer.style.display="block"
 
-        userChoiceImg.src=`/images/${userChoice}.webp`
-        compChoiceImg.src=`/images/${compChoice}.webp`
+        userChoiceImg.src=`./images/${userChoice}.webp`
+        compChoiceImg.src=`./images/${compChoice}.webp`
 
         if(userChoice===compChoice){
             drawCount++;
